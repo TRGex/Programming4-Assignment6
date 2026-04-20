@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection;
     public Rigidbody rb;
 
+    public bool grabbed = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (grabbed == false)
+        {
+            Move();
+        }
     }
 
     private void MovementInput()
