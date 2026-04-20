@@ -33,13 +33,11 @@ namespace NodeCanvas.Tasks.Actions {
 
             if (agent.transform.position.z < localTarget.value.z)
             {
-				agent.transform.Translate(0,0,2 * Time.deltaTime);
-				Debug.Log(agent.transform.position.z + "1");
+				agent.transform.Translate(0,0,5 * Time.deltaTime);
             }
 			else if (agent.transform.position.z > localTarget.value.z)
 			{
-				agent.transform.Translate(0,0, -2f * Time.deltaTime);
-                Debug.Log(agent.transform.position.z + "2");
+				agent.transform.Translate(0,0, -5f * Time.deltaTime);
             }
 
         }
